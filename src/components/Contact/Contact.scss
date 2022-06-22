@@ -1,0 +1,26 @@
+.Contact {
+    position: fixed;
+    bottom: 0;
+    left: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    a {
+        color: #fff;
+    }
+    i {
+        color: #fff;
+        font-size: 1.6rem;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .dash {
+       height: 6rem;
+       width: 0.1rem;
+       background-color: #fff;
+       margin: auto;
+    }
+}

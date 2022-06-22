@@ -1,0 +1,104 @@
+.Skills {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    .Particles {
+        width: 100% !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        canvas {
+            width: 100% !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+        }
+    }
+   .Skills-inner {
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       right: 0;
+       left: 0;
+       color: #fff;  
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       grid-gap: 9rem;
+       h1 {
+        position: fixed;
+        top: 60%;
+        right: 30%;
+        color: rgba(252, 246, 244, 0.1);
+        font-size: calc(5rem + 5vw);
+        z-index: 0;
+    }
+       .box-inner {
+        z-index: 2;
+        transition: all ease-in 0.2s;
+        border: 2px solid #fff;
+        width: 30vw;
+        height: 60vh;
+        padding: 2rem; 
+        font-size: calc(0.5em + 1vw);
+        line-height: 1.7rem;
+        font-family: "Ubuntu Mono", monospace; 
+        &:hover {
+            background-color: rgb(247, 247, 247);
+            border: 2px solid rgb(30, 184, 255);
+            color: black;
+        }
+        &:hover svg {
+            fill: black;
+        }
+        h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 0.7rem;
+        }    
+        svg {
+        fill: rgb(252, 246, 244);
+       }
+       }
+   }
+}
+// Tablet 
+@media only screen and (max-width: 50em){
+    .Skills {
+        overflow: auto;
+        .Skills-inner {
+            grid-gap: 3rem;
+            flex-direction: column;
+            .box-inner { 
+                width: 50vw;
+                height: max-content;
+            }
+        }
+    }
+  
+ }
+// Mobie 
+@media only screen and (max-width: 600px) {
+    .Skills {
+        .Particles {
+            canvas {
+               height: 135vh !important;
+            }
+        }
+        .Skills-inner {
+            flex-direction: column;
+            padding: 8rem 0px;
+            .box-inner {
+                height: max-content;
+                padding: 1.5rem;
+                line-height: 1rem;
+            }
+        }
+    }
+  
+ }

@@ -1,0 +1,238 @@
+.Home {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    %handel_TextMenu {
+        color: #fff;
+        font-weight: 500;
+        transition: all 0.3s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .Home-Particles {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        canvas {
+            width: 100%;
+            height: 100vh !important;
+            object-fit: cover !important;
+        }
+    }
+    .main-info {
+        color: #fff !important;
+        opacity: 0;
+        transition: all ease-in 0.5s;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        width: 50%;
+        height: 100vh;
+        background-color: rgb(76, 130, 212);
+        z-index: -1;
+        animation-name: animateMainInfo;
+        animation-duration: 3s;
+        .info-box {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            z-index: 1;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 52rem;
+            height: 17rem;
+            border: 0.2rem solid #fff;
+            img {
+                width: 20rem;
+                height: 30rem;
+                margin-top: -10.8rem;
+            }
+            .info-childen {
+                font-size: 1.4rem;
+                padding-right: 10rem;
+                h3 {
+                    font-family: Karla, sans-serif;
+                    font-weight: 500;
+                }
+                span {
+                    font-size: calc(0.5rem + 1.2vw);
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    @keyframes animateMainInfo {
+        from {
+            height: 0vh;
+        }
+        to {
+            height: 100vh;
+        }
+    }
+    .set-main-info {
+        opacity: 1;
+    }
+    .main {
+        width: 100%;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 1rem 0 1rem;
+            .prefix_index {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation-name: prefix_position_index;
+                animation-duration: 1s;
+                z-index: 1;
+            }
+            @keyframes prefix_position_index {
+                from {
+                    top: 85%;
+                    left: 92%;
+                }
+                to {
+                    top: 50%;
+                    left: 50%;
+                }
+            }
+            .prefix_position {
+                position: absolute;
+                top: 85%;
+                        left: 92%;
+                animation-name: prefix_position_animate;
+                animation-duration: 1s;
+                @keyframes prefix_position_animate {
+                    from {
+                        top: 50%;
+                        left: 50%;
+                    }
+                    to {
+                        top: 85%;
+                        left: 92%;
+                    }
+                }
+                svg {
+                    width: 120px;
+                    height: 120px;
+                }
+                span {
+                    display: none;
+                }
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                span {
+                    margin: 1rem 0 -1rem 0;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                svg {
+                    cursor: pointer;
+                    animation: 1.5s linear 0s infinite normal none running prefix__svg;
+                }
+                @keyframes prefix__svg {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+            a:nth-child(1) {
+                transform: rotate(-90deg);
+                h2 {
+                    @extend %handel_TextMenu;
+                }
+            }
+            a:nth-child(3) {
+                transform: rotate(90deg);
+                h2 {
+                    @extend %handel_TextMenu;
+                }
+            }
+        }
+        .bottom {
+            position: absolute;
+            right: 0;
+            bottom: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            h2 {
+                @extend %handel_TextMenu;
+            }
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .main .top {
+            svg {
+                width: 100px;
+                height: 100px;
+            }
+            .prefix_index {
+                top: 50%;
+                left: 50%;
+            }
+            @keyframes prefix_position_index {
+                from {
+                    top: 85%;
+                    left: 84%;
+                }
+                to {
+                    top: 50%;
+                    left: 50%;
+                }
+            }
+            .prefix_position {
+                top: 85%;
+                left: 84%;
+                @keyframes prefix_position_animate {
+                    from {
+                        top: 50%;
+                        left: 50%;
+                    }
+                    to {
+                        top: 85%;
+                        left: 84%;
+                    }
+                }
+                svg {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+        .main-info .info-box {
+            flex-direction: column;
+            justify-content: center;
+            width: 18rem;
+            height: 20rem;
+            .info-childen {
+                width: 100%;
+                font-size: 1rem;
+                margin: -1rem 0 1rem -1rem;
+            }
+            img {
+                width: 13rem;
+                height: 23rem;
+                margin: auto;
+            }
+        }
+    }
+}

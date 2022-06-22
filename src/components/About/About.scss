@@ -1,0 +1,137 @@
+.About {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    .Particles {
+        width: 100% !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        canvas {
+            width: 100% !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+        }
+    }
+   .About-inner {
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       right: 0;
+       left: 0;
+       color: #fff;
+       h1 {
+        position: fixed;
+        top: -2rem;
+        left: 5%;
+        color: rgba(252, 246, 244, 0.1);
+        font-size: calc(5rem + 4vw);
+        z-index: 0;
+       }
+       .content {
+        border: 2px solid rgb(252, 246, 244);
+        color: rgb(252, 246, 244);
+        padding: 2rem;
+        width: 50vw;
+        height: 60vh;
+        z-index: 3;
+        line-height: 1.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(0.6rem + 1vw);
+        backdrop-filter: blur(4px);
+        position: absolute;
+        left: calc(5rem + 5vw);
+        top: 10rem;
+        font-family: "Ubuntu Mono", monospace;
+        font-style: italic;
+        p {
+            line-height: 3rem;
+        }
+       }
+       .Spaceman {
+        img {
+            position: absolute;
+            right: 5%;
+            top: 8%;
+            animation: Spaceman_img 1s infinite alternate;
+          }
+          @keyframes Spaceman_img {
+            from {
+                top: 8%;
+            }
+            to {
+                top: 11%;
+                right: 3%;
+            }
+        }
+       }
+      
+      
+   }
+}
+// Tablet 
+@media only screen and (max-width: 50em){
+    .About {
+        .blur .blog-box .blog-main {
+             grid-template-columns: 100%;
+             width: 100%;
+             .blog-child { 
+                 margin: auto;
+             }
+         }
+    }
+  
+ }
+ // Tablet 
+@media only screen and (max-width: 50em){
+    .About {
+        .content {
+            width: 50vw !important;
+            height: auto !important;
+            backdrop-filter: none !important;
+            margin-top: 2rem !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+        }
+        .Spaceman {
+            img {
+                width: 20%;
+            }
+        }
+    }
+  
+ }
+// Mobie 
+@media only screen and (max-width: 600px) {
+    .About {
+        h1 {
+            top: inherit !important;
+            left: 0.5rem !important;
+           }
+        .content {
+            width: 50vw !important;
+            height: auto !important;
+            backdrop-filter: none !important;
+            margin-top: 2rem !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            p {
+                font-size: 0.7rem;
+                line-height: 1.6rem !important;
+            }
+        }
+        .Spaceman {
+            img {
+                width: 20%;
+            }
+        }
+    }
+  
+ }

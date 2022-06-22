@@ -1,0 +1,94 @@
+.Blog {
+    background-image: url(../../asset/image/blog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    width: 100%;
+    .blur {
+        background-color: rgba(70, 70, 70, 0.137);
+        width: 100%;
+        height: auto;
+        padding-bottom: 5rem;
+        h1 {
+            position: fixed;
+            top: -2rem;
+            left: 5rem;
+            color: rgba(0, 0, 0, 0.445);
+            font-size: calc(5rem + 5vw);
+        }
+        .blog-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10rem;
+            .blog-main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: calc(1rem + 2vw);
+                .blog-child {
+                    cursor: pointer;
+                    box-shadow: rgb(0 0 0 / 20%) 0px 0px 1rem 0px;
+                    padding: 1rem;
+                    width: 23rem;
+                    background-color: rgb(204, 204, 24);
+                    background-image: linear-gradient( to right, rgba(164, 107, 238, 0.651), rgb(59, 153, 216));
+                    border: 0.18rem solid #fff;
+                    transition: 0.8s ease-in;  
+                    color: #fff;
+                    img {
+                        width: 100%;
+                        border: 1px solid;
+                    }
+                    h3 {
+                     padding-bottom: 0.5rem;
+                     font-weight: 700;
+                     border-bottom: 1px solid #fff;
+                    }
+                    .tag {
+                     display: flex;
+                     gap: 0.7rem;
+                     margin-bottom: 0.7rem;
+                    }
+                    &:hover {
+                        background-color: red;
+                        background-image: linear-gradient( to right, rgba(107, 212, 238, 0.651), rgb(13, 99, 148));
+                        color: #fff;
+                    }
+                    &:hover img {
+                        border: 1px solid #fff;
+                    }
+                    &:hover h3 {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+// Tablet 
+@media only screen and (max-width: 50em){
+    .Blog {
+        .blur .blog-box .blog-main {
+             grid-template-columns: 100%;
+             width: 100%;
+             .blog-child { 
+                 margin: auto;
+             }
+         }
+    }
+  
+ }
+// Mobie 
+@media only screen and (max-width: 600px) {
+    .Blog {
+        .blur .blog-box .blog-main {
+             grid-template-columns: 100%;
+             .blog-child { 
+                 width: 16rem;
+                 font-size: 0.61rem;
+             }
+         }
+    }
+  
+ }
