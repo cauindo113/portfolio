@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <div className='logo'>
-        <div className='logo-text'>HC hihi</div>
+        <div className='logo-text'>HC</div>
         <i className="fa fa-play-circle" aria-hidden="true"></i>
       </div>
       <div className='power'>
