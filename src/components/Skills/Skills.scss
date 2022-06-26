@@ -93,14 +93,10 @@
         .Skills-inner {
             flex-direction: column;
             padding: 8rem 0px;
-            gap: 0rem !important;
             .box-inner {
                 height: max-content;
                 padding: 1.5rem;
                 line-height: 1rem;
-            }
-            .box-inner:nth-child(2) {
-                margin-top: 3rem !important;
             }
         }
     }

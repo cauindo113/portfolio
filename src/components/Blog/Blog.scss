@@ -1,14 +1,5 @@
 .Blog {
-    background-image: url(../../asset/image/blog.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    .blur {
-        background-color: rgba(70, 70, 70, 0.137);
-        width: 100%;
-        height: auto;
-        padding-bottom: 5rem;
+    background-image: linear-gradient( to right, rgba(183, 130, 253, 0.651), rgb(137, 202, 245));
         h1 {
             position: fixed;
             top: -2rem;
@@ -64,11 +55,10 @@
             }
         }
     }
-}
 // Tablet 
 @media only screen and (max-width: 50em){
     .Blog {
-        .blur .blog-box .blog-main {
+         .blog-box .blog-main {
              grid-template-columns: 100%;
              width: 100%;
              .blog-child { 
@@ -81,7 +71,7 @@
 // Mobie 
 @media only screen and (max-width: 600px) {
     .Blog {
-        .blur .blog-box .blog-main {
+         .blog-box .blog-main {
              grid-template-columns: 100%;
              .blog-child { 
                  width: 16rem;

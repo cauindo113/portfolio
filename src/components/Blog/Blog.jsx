@@ -3,7 +3,6 @@ import './Blog.scss'
 const Blog = () => {
     return (
         <div className='Blog'>
-            <div className='blur'>
                 <h1>BLOG</h1>
             <div className='blog-box'>
                 <div className='blog-main'>
@@ -88,8 +87,6 @@ const Blog = () => {
                         <span>13 May, 2021</span>
                     </div>
                 </div>
-
-            </div>
             </div> 
         </div>
     )
